@@ -43,7 +43,7 @@ function generateCalendar(month, year) {
         } else if (dayStart < daysInMonth(month, year)) {
             checkStartChecked = true;
             $('#calendar .calendar-view').append(
-                '<div class="calendar-day ' + classWeekend + '">' 
+                '<div class="calendar-day calendar-day--current ' + classWeekend + '">' 
                     + dayName +
                     + (dayStart += 1) + 
                 '</div>'
@@ -59,7 +59,15 @@ function generateCalendar(month, year) {
  * @param {*} type 
  */
 function switchCalendar(type) {
-    generateCalendar((currentMonth + type), currentYear);
+    if (currentMonth + type <= 0) {
+        currentYear = currentYear - 1;
+        generateCalendar(12, currentYear);
+    } else if (currentMonth + type > 12){
+        currentYear = currentYear + 1;
+        generateCalendar(1, currentYear);
+    } else {
+        generateCalendar((currentMonth + type), currentYear);
+    }
 }
 
 /**

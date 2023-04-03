@@ -17,7 +17,7 @@
 .calendar-day.calendar-day--weekend {
     color: rgb(133, 133, 133)
 }
-.calendar-day:hover {
+.calendar-day--current:hover {
     cursor: pointer;
     color: white;
     background-color: rgb(109, 109, 249);
