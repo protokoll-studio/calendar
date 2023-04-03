@@ -9,5 +9,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
+    <div id="calendar">
+      <div class="calendar-switch">
+        <div class="calendar-switch__previous" onclick="switchCalendar(-1)"><</div>
+        <div class="calendar-switch__next" onclick="switchCalendar(+1)">></div>
+      </div>
+      <div class="calendar-info">
+      </div>
+      <div class="calendar-view"></div>
+    </div>
   </body>
+  <script rel="javascript" src="src/scripts/calendar.js"></script>
+  <script>
+    generateCalendar(new Date().getMonth() + 1, new Date().getFullYear());
+  </script>
 </html>
