@@ -1,0 +1,53 @@
+/** CUSTOM TEXT EDITOR */
+:root {
+    --cte-border-color: grey;
+}
+#cte {
+    border: 1px solid var(--cte-border-color);
+    background-color: #fcfcfc;
+    width: 350px;
+    font-size: 18px;
+    border-radius: 7px; 
+}
+#cte .cte-separator {
+    border-bottom: 1px solid var(--cte-border-color);
+}
+#cte textarea {
+    resize: none;
+    width: 100%;
+}
+#cte select {
+    min-width: 200px;
+    padding: inherit;
+    padding: 5px;
+}
+#cte select:after {
+    display: none;
+}
+#cte .choose-color {
+    display: block;
+    min-height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: 1px solid grey;
+}
+#cte .cte-text-edit {
+    border-left: 1px solid var(--cte-border-color);
+}
+#cte .cte-text-edit:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+#cte-result {
+    width: 600px;
+    height: 600px;
+    border: 1px solid grey;
+    display: block;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+#cte .cte-refresh:hover,
+#cte .cte-reset:hover {
+    cursor: pointer;
+    opacity: .7;
+}
